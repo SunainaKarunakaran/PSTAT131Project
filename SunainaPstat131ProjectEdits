@@ -1,0 +1,29 @@
+---
+title: "PSTAT131Project"
+author: "Yuktha Senthil"
+date: "2025-02-26"
+output: html_document
+---
+```{r setup, include=FALSE}
+library(tidyverse)
+library(ISLR)
+library(glmnet)
+library(tree)
+library(maptree)
+library(randomForest)
+library(gbm)
+library(ROCR)
+```
+
+```{r}
+read_csv("NetflixEngagementDataset.csv")
+
+Netflix <- read_csv('NetflixEngagementDataset.csv',
+                 col_names=c('Customer ID','Subscription Length','Customer Satisfaction Score',
+                             'Daily Watch Time (Hours)','Engagement Rate',
+                'Device Used Most Often','Genre Preference',
+                'Region','Payment History','Subscription Plan','Churn Status',
+                'Support Queries Logged','Age','Monthly Income','Promotional Offers Used',
+                'Number of Profiles Created'))
+glimpse(Netflix)
+```
